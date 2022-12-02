@@ -38,7 +38,7 @@ class ModelFactory(nn.Module):
             self.model = smp.FPN(encoder_name=encoder_name, encoder_weights='imagenet', in_channels=in_channels, classes=class_num)
 
         # mobilenet_v2: optimal input shape (224 * 224)
-        elif self.architecture == 'DeepLabV3+':
+        elif self.architecture == 'DeepLabV3Plus':
             self.model = smp.DeepLabV3Plus(encoder_name=encoder_name, encoder_weights='imagenet', in_channels=in_channels, classes=class_num)
 
     def forward(self, x):
